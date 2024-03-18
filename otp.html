@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OTP Verification Component</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="otp-container">
+  <h2>OTP Verification</h2>
+  <p>An OTP has been sent to your mobile number.</p>
+  <div class="otp-input-container">
+    <input type="text" maxlength="1" id="digit1" oninput="moveToNext(this, 'digit2')" />
+    <input type="text" maxlength="1" id="digit2" oninput="moveToNext(this, 'digit3')" />
+    <input type="text" maxlength="1" id="digit3" oninput="moveToNext(this, 'digit4')" />
+    <input type="text" maxlength="1" id="digit4" oninput="moveToNext(this, 'digit5')" />
+    <input type="text" maxlength="1" id="digit5" oninput="moveToNext(this, 'digit5')" />
+  </div>
+  <button onclick="verifyOTP()">Verify OTP</button>
+  <p class="error-message" id="errorMessage"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
